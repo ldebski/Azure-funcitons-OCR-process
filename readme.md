@@ -26,7 +26,7 @@ All of those resources require some sort of authentication to be used. Those are
 
 Those variables are used in `OCR-function/__init__.py` or in `OCR-function/function.json` files.
 
-Additionally all python libraries needed are specified in `OCR-function/requirements.txt` file. 
+Additionally all python libraries needed are specified in `requirements.txt` file. 
 
 ## Additional information
 
