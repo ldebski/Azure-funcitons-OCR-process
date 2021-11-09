@@ -9,7 +9,7 @@ The function uses [Blob Storage binding](https://docs.microsoft.com/en-us/azure/
 
 For every file processed logging information is saved inside SQL database with information whether OCR process succeeded or not if some exception is caught e.g. wrong file extension, empty file.
 
-If this function fails and an exception won't be caught, by default Azure Function will retry this operation 5 times and then add information about this fail on top of Poison Queue. [Read here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-error-pages?tabs=csharp)
+If this function fails and an exception won't be caught, by default Azure Function will retry this operation 5 times and then add information about this fail on top of Poison Queue. Read more in [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-error-pages?tabs=csharp)
 
 ## Set up
 
@@ -25,6 +25,8 @@ All of those resources require some sort of authentication to be used. Those are
 - ocrstorageaccountdemo_STORAGE - Storage Account Connection string
 
 Those variables are used in `OCR-function/__init__.py` or in `OCR-function/function.json` files.
+
+Additionally all python libraries needed are specified in `OCR-function/requirements.txt` file. 
 
 ## Additional information
 
