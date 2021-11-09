@@ -1,0 +1,20 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "inputfile",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "samples/input/{name}.{file_extension}",
+      "connection": "ocrstorageaccountdemo_STORAGE"
+    },
+    {
+      "name": "outputfile",
+      "type": "blob",
+      "direction": "out",
+      "dataType": "binary",
+      "path": "samples/output/{name}.json",
+      "connection": "ocrstorageaccountdemo_STORAGE"
+    }
+  ]
+}
