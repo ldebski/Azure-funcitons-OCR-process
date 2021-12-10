@@ -128,13 +128,11 @@ def main(inputfile: func.InputStream, outputfile: func.Out[str]):
                         timer() - start, 0, f"{file_name} OCR failed to process this file")
         return
 
-    result = results
-
     # Save result from OCR to blob storage as json file
-    save_to_blob(outputfile, json.dumps(result.as_dict()))
+    save_to_blob(outputfile, json.dumps(results.as_dict()))
 
     # Write log information to SQL database
-    page_count = len(result.read_results)
+    page_count = len(results.read_results)
     processing_time = timer() - start
     insert_log_info(file_name, page_count, start_datetime,
                     processing_time, 1, "processed", )
